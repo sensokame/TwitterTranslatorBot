@@ -1,19 +1,19 @@
+"""Module to store and retrive last seen id"""
 FILE_NAME = 'last_seen_id.txt'
 
 def retrieve_last_seen_id(file = FILE_NAME):
-    f_read = open(file, 'r')
-    l = f_read.read().strip()
+    """function to retrieve last seen id from a file"""
     last_seen_id = 0
-    if l:
-        last_seen_id = int(l)
-    f_read.close()
+    with open(file, 'r') as f_read:
+        last_seen_id_line = f_read.read().strip()
+        if last_seen_id_line:
+            last_seen_id = int(last_seen_id_line)
     return last_seen_id
 
 def store_last_seen_id(last_seen_id, file = FILE_NAME):
-    f_write = open(file, 'w')
-    f_write.write(str(last_seen_id))
-    f_write.close()
-    return
+    """function to store last seen id to a file"""
+    with open(file, 'w') as f_write:
+        f_write.write(str(last_seen_id))
 
 def _test():
     file = "test_id.txt"
