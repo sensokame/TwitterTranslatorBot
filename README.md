@@ -25,3 +25,9 @@ this library uses the translate library https://github.com/terryyin/translate-py
 
 This is an MIT project, you can fork and change the code however you like.  
 you can contribute back to this project in the form of pull requests and/or issues
+
+## Acknowledgement
+
+This bot uses mainly two libraries:  
+- [Tweepy](https://github.com/tweepy/tweepy) for twitter api manipulation
+- [Python translate](https://github.com/terryyin/translate-python) for translation
